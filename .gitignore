@@ -1,2 +1,4 @@
 pics/*
 credentials/*
+reddit_scraper/pics/*
+reddit_scraper/geckodriver.log
