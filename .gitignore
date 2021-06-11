@@ -2,3 +2,5 @@ pics/*
 credentials/*
 reddit_scraper/pics/*
 reddit_scraper/geckodriver.log
+ml_trainer_container/credentials/*
+ml_trainer_container/pics/*

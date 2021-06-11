@@ -1,0 +1,4 @@
+find . | grep requirements.txt | xargs -n 100 -I % sh -c "{ python3 -m pip install -r %; }"
+find . | grep -v "\./setup" | grep setup | xargs -n 100 -I % sh -c "{ %; }"
+chmod 777 ./* -R
+sudo apt install docker

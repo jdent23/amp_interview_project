@@ -1,0 +1,4 @@
+tensorflow-gpu
+sklearn
+mysql-connector-python
+google-cloud-storage
