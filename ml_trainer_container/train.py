@@ -5,7 +5,6 @@ from tensorflow.keras import models
 from tensorflow.keras import layers
 from keras.preprocessing.image import ImageDataGenerator
 import os
-import shutil
 import pandas as pd
 from tensorflow.keras import optimizers
 from keras.callbacks import ModelCheckpoint
@@ -13,12 +12,9 @@ import mysql.connector
 from mysql.connector.constants import ClientFlag
 from google.cloud import storage
 import pandas as pd
-import shutil
 
-'''
-import tensorflow as tf
+from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
-'''
 
 # Options: EfficientNetB0, EfficientNetB1, EfficientNetB2, EfficientNetB3, ... up to  7
 # Higher the number, the more complex the model is. and the larger resolutions it  can handle, but  the more GPU memory it will need# loading pretrained conv base model#input_shape is (height, width, number of channels) for images
@@ -62,13 +58,13 @@ def get_data():
     cnxn.close()
 
     try:
-        shutil.rmtree('pics')
+        os.mkdir('pics')
+        os.mkdir('pics/dogs')
+        os.mkdir('pics/cats')
     except Exception:
         pass
 
-    os.mkdir('pics')
-    os.mkdir('pics/dogs')
-    os.mkdir('pics/cats')
+
     return(df.apply(download_file_in_row, axis=1))
 
 def train(df):
@@ -114,11 +110,9 @@ def train(df):
     )
 
     try:
-        shutil.rmtree('checkpoints')
+        os.mkdir('checkpoints')
     except Exception:
         pass
-
-    os.mkdir('checkpoints')
 
     checkpoint_path = 'checkpoints/cp-{epoch:04d}.hdf5'
     checkpoint_dir = os.path.dirname(checkpoint_path)

@@ -1,7 +1,5 @@
 #! /usr/bin/python3
-# https://towardsdatascience.com/sql-on-the-cloud-with-python-c08a30807661
-# https://www.youtube.com/watch?v=B2NfCISmm78
-# https://www.youtube.com/watch?v=pEbL_TT9cHg
+
 import os
 import argparse
 import mysql.connector

@@ -2,3 +2,7 @@ tensorflow-gpu
 sklearn
 mysql-connector-python
 google-cloud-storage
+pandas
+mysql-connector-python
+google-cloud-storage
+Pillow
