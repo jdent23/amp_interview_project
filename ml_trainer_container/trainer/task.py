@@ -1,4 +1,5 @@
 #! /usr/bin/python3
+# https://cloud.google.com/ai-platform/training/docs/training-jobs#python_1
 
 from tensorflow.keras.applications import * #Efficient Net included here
 from tensorflow.keras import models

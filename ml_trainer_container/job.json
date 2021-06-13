@@ -1,0 +1,11 @@
+{
+    "jobId": "ml_training",
+    "trainingInput": {
+        "scaleTier": "BASIC_GPU",
+        "region": "us-east1",
+        "pythonModule": "trainer.task",
+        "masterConfig": {
+            "imageUri": "gcr.io/amp-interview-project/ml_trainer"
+        }
+    }
+}

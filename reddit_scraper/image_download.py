@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 # cat pics.txt | xargs -n 100 -I % sh -c " { ./image_download.py --link \"%\" --destination ./pics; } "
 # ls -1 *.jpg | xargs -n 1 bash -c 'convert "$0" "${0%.jpg}.png"'
+# ls | xargs -n 100 -I % sh -c "{ convert ./% -resize 480x360! ../resized_cats/%; }"
+
 import requests
 import argparse
 import uuid
