@@ -5,3 +5,5 @@ reddit_scraper/geckodriver.log
 ml_trainer_container/credentials/*
 ml_trainer_container/pics/*
 ml_trainer_container/model.hdf5
+pic_labeler/credentials/*
+__pycache__/*

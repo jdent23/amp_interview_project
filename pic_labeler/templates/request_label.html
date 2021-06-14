@@ -1,0 +1,14 @@
+<!doctype html>
+<title>Pic Labeler</title>
+
+<div>
+
+    <a href="/"><button>Return Home</button></a>
+    <p>Cat or Dog?</p>
+    <form action="/request_label/{{ image }}" method="POST">
+        <button type="submit" name="action" value="cat">Cat</button>
+        <button type="submit" name="action" value="dog">Dog</button>
+    </form>
+
+    <img src="https://storage.googleapis.com/amp_interview_project_images/{{ image }}">
+</div>

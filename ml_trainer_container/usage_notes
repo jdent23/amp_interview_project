@@ -1,1 +1,2 @@
 gcloud builds submit --config=build_gcp.yaml
+gcloud ai-platform jobs submit training ml_training_2 --config job.json
